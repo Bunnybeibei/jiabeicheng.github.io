@@ -8,7 +8,5 @@
 #      Markdown formatted page while the second is generated using JSON.
 
 main:   
-  - title: "AutoResearch"
-    url: /autoresearch/
-  - title: "AI4Bio"
-    url: /ai4bio/
+  - title: "Paper Reading"
+      url: /paper_reading/
