@@ -10,8 +10,8 @@ redirect_from:
 I am a **fourth-year** PhD candidate at the [School of Automation and Perception](https://sais.sjtu.edu.cn/), [Shanghai Jiao Tong University](https://www.sjtu.edu.cn/). I am very fortunate to be **co-advised** by [Prof. Zhiyuan Yuan](https://yuanstlab.github.io/) (YuanST Lab, [School of ISTBI](https://istbi.fudan.edu.cn), Fudan University) and [Prof. Yuan Ye](https://people.ucas.ac.cn/~yeyuan) ([Institute of Process Engineering, Chinese Academy of Sciences](http://english.ipe.cas.cn)).
 
 My research interests primarily revolve around:
-* **AI4Bio:** Specifically in single-cell perturbation, multi-omics translation, and H&E-to-omics integration.
-* **AutoResearch:** Focusing on **MLLMs** and **AI Agents** to accelerate scientific discovery.
+* **AI4Bio:** single-cell perturbation, multi-omics translation, and H&E-to-omics integration.
+* **AutoResearch:** MLLMs and AI Agents for streamlining labor-intensive research workflows.
 
 ---
 
