@@ -59,7 +59,7 @@ My research interests primarily revolve around:
 
 ## 🎨 Hobbies
 
-* 🧘‍♀️ | 🏋️‍♀️ | 💃 | 🏃‍♀️ **Daily Exercise**: A different way to stay active every day—a daily ritual.
+* 🧘‍♀️ / 🏋️‍♀️ / 💃 / 🏃‍♀️ **Daily Exercise**: Choosing a different way to stay active every day—a daily ritual.
 * 📖 **Reading**: Biographies, multi-disciplinary popular science, and Philosophy (Stoicism & Zhuangzi).
 * 🎮 **Gaming**: Card games, Soulslike challenges, and Management simulations.
 * 🍜 **Carb Enthusiast**: Pure happiness in all kinds of starch, staple foods, and bread.
