@@ -5,8 +5,6 @@ category: autoresearch
 permalink: /paper_reading/autofigure
 ---
 
-# AUTOFIGURE: Generating and Refining Publication-Ready Scientific Illustrations
-
 > **碎碎念**：AUTOFIGURE 框架通过“代码中转”的方式，成功将 Gemini 等大模型的推理重心从模糊的“像素生成”（png/jpg）转向了精确的“逻辑规划”（SVG/HTML）。
 
 ---
