@@ -53,3 +53,13 @@ My research interests primarily revolve around:
     * **Integration of multi-source gene interaction networks and omics data with graph attention networks to identify novel disease genes**
     * Kaiyuan Yang, **Jiabei Cheng**, Shenghao Cao, Xiaoyong Pan, Hong-bin Shen, Jin Cheng, Ye Yuan
     * [[Paper](https://academic.oup.com/bioinformatics/article-abstract/41/7/btaf181/8118644)]
+
+
+---
+
+## 🎨 Hobbies
+
+* 🧘‍♀️ | 🏋️‍♀️ | 💃 | 🏃‍♀️ **Daily Exercise**: A different way to stay active every day—a daily ritual.
+* 📖 **Reading**: Biographies, multi-disciplinary popular science, and Philosophy (Stoicism & Zhuangzi).
+* 🎮 **Gaming**: Card games, Soulslike challenges, and Management simulations.
+* 🍜 **Carb Enthusiast**: Pure happiness in all kinds of starch, staple foods, and bread.
