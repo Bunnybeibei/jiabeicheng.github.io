@@ -1,12 +1,13 @@
 ---
 title: "AUTOFIGURE: Generating and Refining Publication-Ready Scientific Illustrations"
 collection: paper_reading
-category: autoresearch  # <--- 这一行决定了它会出现在页面上半部分
+category: autoresearch
 permalink: /paper_reading/autofigure
 ---
+
 # AUTOFIGURE: Generating and Refining Publication-Ready Scientific Illustrations
 
-> **碎碎念**：AUTOFIGURE 框架通过“代码中转”的方式，成功将 Gemini 等大模型的推理重心从模糊的“像素生成”（png/jpg）转向了精确的“逻辑规划”（SVG/HTML） 
+> **碎碎念**：AUTOFIGURE 框架通过“代码中转”的方式，成功将 Gemini 等大模型的推理重心从模糊的“像素生成”（png/jpg）转向了精确的“逻辑规划”（SVG/HTML）。
 
 ---
 
@@ -21,41 +22,44 @@ permalink: /paper_reading/autofigure
 论文指出，现有的自动化绘图技术在处理长文本科研任务（平均 >10k tokens）时存在以下痛点：
 * **“搬运”而非“创造”**：诸如 PosterAgent 等现有系统主要侧重于重排和提取已有内容，而非通过理解文本生成原创视觉逻辑。
 * **结构与美学的两难困境**：
-    * **代码生成类（如 TikZ 或 SVG）**：虽然能精准满足几何与结构的硬性约束，但在美学流畅度和出版级的排版可读性上往往表现不佳。
-    * **端到端文生图模型（如 GPT-Image）**：虽然图像视觉质量高，但在处理长文本时难以保持结构忠实度，极易产生逻辑幻觉且伴随文本渲染模糊问题。
-* **长文本推理压力**：从超长文档中提取方法论并自主规划 2D 布局（而非简单翻译绘图指令）对 AI 的长程理解能力构成了极大挑战。
+    * **代码生成类（如 TikZ 或 SVG）**：虽能精准满足几何与结构约束，但在美学流畅度和排版可读性上表现不佳。
+    * **端到端文生图模型（如 GPT-Image）**：图像质量高，但在长文本下难以保持结构忠实度，易产生逻辑幻觉且文本模糊。
+* **长文本推理压力**：从超长文档中提取方法论并自主规划 2D 布局对 AI 的长程理解能力构成了挑战。
 
 ---
 
 ## 3. Methods (技术路线)
 AUTOFIGURE 采用了**推理渲染 (Reasoned Rendering)** 范式，将生成过程解构为三个阶段：
-![AUTOFIGURE 框架 Pipeline](https://github.com/Bunnybeibei/jiabeicheng.github.io/blob/master/images/autofigure.png "AUTOFIGURE 框架 Pipeline")
+
+![AUTOFIGURE 框架 Pipeline](https://raw.githubusercontent.com/Bunnybeibei/jiabeicheng.github.io/master/images/autofigure.png)
 
 ### Stage I: 概念提炼与布局生成
 * **语义解析**：将非结构化长文本转化为机器可读的**符号化布局**（SVG/HTML），明确几何形状和拓扑结构。
 * **内容蒸馏**：提取实体（Nodes）和逻辑关系（Edges），生成核心方法论摘要。
 
 ### Stage II: 批判与精修 (Critique-and-Refine)
-* **多智能体博弈**：模拟“AI 设计师”与“AI 评论员”的迭代对话，旨在通过循环搜索找到全局最优布局。
-* **全局优化**：评论员评估布局的对齐、平衡和重叠避免，通过反馈引导设计师重新解释方法论并改进。
+* **多智能体博弈**：模拟“AI 设计师”与“AI 评论员”的迭代对话，通过循环搜索找到全局最优布局。
+* **全局优化**：评论员评估布局的对齐、平衡和重叠避免，通过反馈引导设计师改进。
 
 ### Stage III: 渲染策略与文本后处理
-* **审美渲染**：将经过验证的符号化蓝图转化为高保真图像，确保视觉风格专业且统一。
-* **“擦除与纠正”策略**：系统先移除背景中模糊的生成文本，再利用 OCR 结合原始蓝图标签进行交叉验证，最后以矢量形式重新填入纠正后的文本，确保 **100% 的文本准确度** 。
+* **审美渲染**：将验证后的符号化蓝图转化为高保真图像，确保视觉风格专业且统一。
+* **“擦除与纠正”策略**：移除背景模糊文本，利用 OCR 结合原始标签交叉验证，最后以矢量形式填入纠正后的文本，确保 **100% 文本准确度**。
 
 ---
 
 ## 4. Evaluation (实验评估)
-* **FigureBench 基准测试**：构建了首个针对长文本科研绘图的大规模基准，包含 **3,300** 对高质量科学文本-图示对，涵盖论文、综述、博客和教科书四大来源。
-* **多元 Baseline 对比**：对比了端到端 T2I（GPT-Image）、文本转代码（Gemini-HTML/SVG）以及多智能体框架（Diagram Agent）等多种方案。
+* **FigureBench 基准测试**：构建了首个针对长文本科研绘图的基准，包含 3,300 对高质量科学文本-图示对。
+* **多元 Baseline 对比**：对比了端到端 T2I (GPT-Image)、文本转代码 (Gemini-HTML/SVG) 以及多智能体框架 (Diagram Agent)。
 * **评估协议**：
-    * **VLM-as-a-judge**：基于 InternVL 3.5 等模型进行维度打分和盲样两两对比，验证显示 VLM 评分与人类偏好高度一致。
-    * **领域专家研究**：邀请 10 位论文一作针对他们**自己发表的工作**生成的图片进行评估。
+    * **VLM-as-a-judge**：基于 InternVL 3.5 进行维度打分，验证显示 VLM 评分与人类偏好高度一致。
+    * **领域专家研究**：邀请 10 位论文一作针对其发表工作的生成结果进行评估。
 
-> **核心结果：**
-> * **出版级标准**：**66.7%** 的人类专家愿意将生成结果直接用于其正式出版的 camera-ready 论文中。
-> * **性能SOTA**：在教科书类别中胜率高达 **97.5%**，显著解决了逻辑忠实度与美感的权衡问题。
+> ### 🚀 核心结果
+> * **出版级标准**：**66.7%** 的人类专家愿意将生成结果直接用于正式出版的论文中。
+> * **性能 SOTA**：在教科书类别中胜率高达 **97.5%**，显著解决了逻辑忠实度与美感的权衡问题。
+
+---
 
 ### 🔗 相关资源
 * **代码**: [GitHub - ResearAI/AutoFigure](https://github.com/ResearAI/AutoFigure)
-* **论文原文**: [ICLR2026](https://openreview.net/forum?id=5N3z9JQJKq)
+* **论文原文**: [ICLR 2026](https://openreview.net/forum?id=5N3z9JQJKq)
