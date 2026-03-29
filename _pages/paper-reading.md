@@ -28,7 +28,3 @@ author_profile: true
     {% include archive-single.html %}
   {% endif %}
 {% endfor %}
-
-{% unless site.paper_reading %}
-  <p>Currently updating... Stay tuned!</p>
-{% endunless %}
