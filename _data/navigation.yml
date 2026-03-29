@@ -9,4 +9,6 @@
 
 main:   
   - title: "AutoResearch"
-    url: /paper_reading/
+    url: /autoresearch/
+  - title: "AI4Bio"
+    url: /ai4bio/
