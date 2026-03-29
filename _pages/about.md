@@ -18,12 +18,12 @@ My research interests primarily revolve around:
 ## 📖 Education
 
 * **Ph.D. in AI4Bio**, [Shanghai Jiao Tong University (SJTU)](https://www.sjtu.edu.cn/)
-    * Sep. 2022 – Present | Shanghai, China
+    * Sep. 2022 – Present, Shanghai, China
     * Supervisors: [Prof. Zhiyuan Yuan](https://yuanstlab.github.io/) and [Prof. Yuan Ye](https://people.ucas.ac.cn/~yeyuan)
 
 * **B.Eng. in Automation**, [Shandong University (SDU)](https://www.sdu.edu.cn/index.htm)
-    * Sep. 2018 – June 2022 | Jinan, China
-    * **Outstanding Graduate of SDU** | GPA: 4.25 / 5.0 (Rank: 1st)
+    * Sep. 2018 – June 2022, Jinan, China
+    * **Outstanding Graduate of SDU** (GPA: 4.25 / 5.0, Rank: 1st)
 
 ---
 
