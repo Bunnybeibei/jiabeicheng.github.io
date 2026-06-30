@@ -29,6 +29,10 @@ My research interests primarily revolve around:
 
 ## 📝 Selected Publications
 
+* **KDD 2026**
+    * **scTranslation: A Comprehensive Benchmark for Single-Cell Multi-Omics Modality Translation**
+    * **Jiabei Cheng**, Jingbo Zhou, Jun Xia, Changkai Li, Zhen Lei, Chang Yu, Stan Z. Li
+    * [[Paper](https://arxiv.org/abs/2606.03906)] [[Github](https://github.com/Bunnybeibei/scTranslation)]
 * **NeurIPS 2025**
     * **PRESCRIBE: Predicting Single-Cell Responses with Bayesian Estimation**
     * **Jiabei Cheng**, Changxi Chi, Jingbo Zhou, Hongyi Xin, Jun Xia
